@@ -19,7 +19,7 @@ An [AMP (CubeCoders)](https://cubecoders.com/AMP) deployment template that runs 
    Wasilewskiii/s1ampserver:main
    ```
    then fetch/refresh. "Schedule I Dedicated Server (S1DS)" appears in the Create Instance application list.
-2. **Create the instance.** It must run **directly on the host** (not inside an AMP container) so it can reach the Docker daemon — the template declares this, but if your ADS forces containers for new instances, temporarily disable that default in Instance Deployment settings, create the instance, and re-enable it.
+2. **Create the instance.** It must run **directly on the host** (not inside an AMP container) so it can reach the Docker daemon. The template declares this, but if your ADS forces containers for new instances, temporarily disable that default in Instance Deployment settings, create the instance, and re-enable it.
 3. Open the instance → **Configuration → Schedule I** and set:
    - **Steam Username / Steam Password**: the account that owns the game (stored only in a `chmod 600` env file inside the instance; avoid single quotes in credentials)
    - **Game Runtime**: `IL2CPP` (recommended: players stay on the game's default Steam branch) or `Mono` (uses the `alternate` branch)
