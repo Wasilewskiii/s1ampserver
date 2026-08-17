@@ -60,6 +60,11 @@ Then launch the game normally — a MelonLoader console opens alongside and list
 
 Keep the client mod on the **same S1DS release as the server** — the server verifies client mods at join and version mismatches are the most common "can't connect" cause.
 
+## Known limitations
+
+- AMP's CPU/memory graphs for this instance show the tiny `docker` client process, not the game — check real usage with `docker stats s1ds-server` on the host. Cap the container's resources with the Memory/CPU Limit settings.
+- The mod currently advertises but does not enforce `serverPassword` at join with the SteamGameServer auth provider (as of v1.0.5).
+
 ## Troubleshooting
 
 - **"This application is not compatible with containers"** — expected; see step 2 of Server setup.
