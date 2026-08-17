@@ -19,7 +19,7 @@ An [AMP (CubeCoders)](https://cubecoders.com/AMP) deployment template that runs 
    Wasilewskiii/s1ampserver:main
    ```
    then fetch/refresh. "Schedule I Dedicated Server (S1DS)" appears in the Create Instance application list.
-2. **Create the instance.** It must run **directly on the host** (not inside an AMP container) so it can reach the Docker daemon. The template declares this, but if your ADS forces containers for new instances, temporarily disable that default in Instance Deployment settings, create the instance, and re-enable it.
+2. **Create the instance without a container.** It must run directly on the host so it can reach the Docker daemon. AMP shows an advisory about this during creation. If you create it inside a container anyway, the first start stops with a clear error telling you to recreate it on the host.
 3. Open the instance → **Configuration → Schedule I** and set:
    - **Steam Username / Steam Password**: the account that owns the game (stored only in a `chmod 600` env file inside the instance; avoid single quotes in credentials)
    - **Game Runtime**: `IL2CPP` (recommended: players stay on the game's default Steam branch) or `Mono` (uses the `alternate` branch)
@@ -64,7 +64,7 @@ Keep the client mod on the **same S1DS release as the server**. The server verif
 
 ## Troubleshooting
 
-- **"This application is not compatible with containers"**: expected, see step 2 of Server setup.
+- **"Docker daemon not reachable" on start**: the instance was created inside an AMP container, or the AMP user is not in the `docker` group. See step 2 of Server setup.
 - **`STEAM_USER and STEAM_PASS must be provided`**: Steam credentials not set in the instance configuration.
 - **Steam Guard loop**: email codes expire; trigger a fresh login attempt, then use the newest code promptly.
 - **Players time out**: check the three ports above are open/forwarded, and that `server_config.toml` ports match the template's port settings.
