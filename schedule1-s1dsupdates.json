@@ -1,0 +1,10 @@
+[
+    {
+        "UpdateStageName": "Pull S1DS Docker image",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/usr/bin/docker",
+        "UpdateSourceArgs": "pull ghcr.io/ifbars/s1dedicatedservers:{{ImageTag}}",
+        "SkipOnFailure": false
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "UpdateStageName": "Prepare S1DS data directories and environment file",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"mkdir -p '{{$FullRootDir}}game' '{{$FullRootDir}}steamcmd' '{{$FullRootDir}}steamhome' && setfacl -R -m u:1000:rwX -m d:u:1000:rwX -m u:$(id -u):rwX -m d:u:$(id -u):rwX '{{$FullRootDir}}game' '{{$FullRootDir}}steamcmd' '{{$FullRootDir}}steamhome' && printf 'S1DS_RUNTIME=%s\\nSTEAM_USER=%s\\nSTEAM_PASS=%s\\nSTEAM_GUARD=%s\\nFORCE_STEAMCMD_UPDATE=false\\n' '{{Runtime}}' '{{SteamUser}}' '{{SteamPass}}' '{{SteamGuard}}' > '{{$FullRootDir}}s1ds.env' && chmod 600 '{{$FullRootDir}}s1ds.env'\"",
+        "SkipOnFailure": false
+    }
+]

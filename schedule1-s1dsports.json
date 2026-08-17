@@ -1,0 +1,23 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 38465,
+        "Ref": "GamePort",
+        "Name": "Game Port",
+        "Description": "Main game traffic (UDP). Must match serverPort in server_config.toml inside the game data directory."
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 38465,
+        "Ref": "StatusPort",
+        "Name": "Status Query Port",
+        "Description": "S1DS status query endpoint (TCP). Mapped to the container's serverPort TCP listener."
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 27018,
+        "Ref": "QueryPort",
+        "Name": "Steam Query Port",
+        "Description": "Steam game server query port (UDP). Must match steamGameServerQueryPort in server_config.toml. Default moved off 27016 to avoid clashing with other Steam servers on this host."
+    }
+]

@@ -1,0 +1,65 @@
+[
+    {
+        "DisplayName": "Steam Username",
+        "Category": "Schedule I:sports_esports",
+        "Subcategory": "Steam Account:cloud:1",
+        "Description": "Steam account that OWNS Schedule I. Used only inside the S1DS container by SteamCMD to download/update the game. Avoid single quotes in credentials.",
+        "Keywords": "steam,login,account,SteamUser",
+        "FieldName": "SteamUser",
+        "InputType": "text",
+        "ParamFieldName": "SteamUser",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Steam Password",
+        "Category": "Schedule I:sports_esports",
+        "Subcategory": "Steam Account:cloud:1",
+        "Description": "Password for the Steam account above. Stored in the instance's s1ds.env (chmod 600). Avoid single quotes.",
+        "Keywords": "steam,password,SteamPass",
+        "FieldName": "SteamPass",
+        "InputType": "password",
+        "ParamFieldName": "SteamPass",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Steam Guard Code",
+        "Category": "Schedule I:sports_esports",
+        "Subcategory": "Steam Account:cloud:1",
+        "Description": "Only needed for the FIRST login if Steam Guard prompts for a code. Set it, start the server once, then clear it again.",
+        "Keywords": "steam,guard,2fa,SteamGuard",
+        "FieldName": "SteamGuard",
+        "InputType": "text",
+        "ParamFieldName": "SteamGuard",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Game Runtime",
+        "Category": "Schedule I:sports_esports",
+        "Subcategory": "Server:dns:2",
+        "Description": "IL2CPP uses the game's default Steam branch (players do not need to switch branches). Mono uses the 'alternate' branch. Players always need MelonLoader plus the matching client mod zip from the S1DS GitHub releases.",
+        "Keywords": "runtime,il2cpp,mono,branch",
+        "FieldName": "Runtime",
+        "InputType": "enum",
+        "ParamFieldName": "Runtime",
+        "DefaultValue": "il2cpp",
+        "EnumValues": {
+            "il2cpp": "IL2CPP - default game branch (recommended)",
+            "mono": "Mono - alternate branch"
+        }
+    },
+    {
+        "DisplayName": "Docker Image Tag",
+        "Category": "Schedule I:sports_esports",
+        "Subcategory": "Server:dns:2",
+        "Description": "Tag of ghcr.io/ifbars/s1dedicatedservers to run. 'latest' follows stable releases; pin an exact version (e.g. 1.0.5) for controlled upgrades. Run Update in AMP to pull a new tag.",
+        "Keywords": "docker,image,tag,version",
+        "FieldName": "ImageTag",
+        "InputType": "text",
+        "ParamFieldName": "ImageTag",
+        "DefaultValue": "latest",
+        "EnumValues": {}
+    }
+]
