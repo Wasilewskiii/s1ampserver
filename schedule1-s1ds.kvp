@@ -21,7 +21,7 @@ Meta.Prerequisites=[]
 Meta.ExtraContainerPackages=[]
 Meta.ConfigReleaseState=NotSpecified
 Meta.NoCommercialUsage=False
-Meta.ConfigVersion=3
+Meta.ConfigVersion=4
 Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
 Meta.AppConfigId=3e0704cc-a132-44e5-9c0b-0685502c24c2
@@ -67,10 +67,10 @@ App.MonitorChildProcessName=
 App.SupportsUniversalSleep=False
 Console.FilterMatchRegex=
 Console.FilterMatchReplacement=
-Console.ThrowawayMessageRegex=^(_XSERVTrans.*|The XKEYBOARD keymap compiler.*|> Warning:\s+Could not resolve keysym.*|Errors from xkbcomp are not fatal.*|[0-9a-f]{2,6}:(fixme|warn):.*|libEGL warning:.*)$
-Console.AppReadyRegex=^(?:\[[\d:.]+\] )?\[DedicatedServerHost\] === DEDICATED SERVER READY \(orchestrator\) ===$
-Console.UserJoinRegex=^(?:\[[\d:.]+\] )?\[DedicatedServerHost\] Player joined: (?<username>.+) \(ClientId [1-9]\d*\)$
-Console.UserLeaveRegex=^(?:\[[\d:.]+\] )?\[DedicatedServerHost\] Starting auto save: player_left_(?<username>.+)$
+Console.ThrowawayMessageRegex=^(_XSERVTrans.*|The XKEYBOARD keymap compiler.*|> Warning:\s+Could not resolve keysym.*|Errors from xkbcomp are not fatal.*|[0-9a-f]{2,6}:(fixme|warn):.*|libEGL warning:.*|ALSA lib .*)$
+Console.AppReadyRegex=\[DedicatedServerHost\] === DEDICATED SERVER READY
+Console.UserJoinRegex=\[DedicatedServerHost\] Player joined: (?<username>.+?) \(ClientId [1-9]\d*\)
+Console.UserLeaveRegex=\[DedicatedServerHost\] Starting auto save: player_left_(?<username>[^\x1b]+)
 Console.UserChatRegex=
 Console.MetricsRegex=
 Console.SuppressLogAtStart=False
