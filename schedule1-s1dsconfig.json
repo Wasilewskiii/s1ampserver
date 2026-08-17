@@ -92,9 +92,9 @@
         "Subcategory": "Server:dns:2",
         "Description": "Maximum concurrent players. Applied on each start.",
         "Keywords": "players,maxPlayers,slots",
-        "FieldName": "MaxPlayers",
+        "FieldName": "$MaxUsers",
         "InputType": "number",
-        "ParamFieldName": "MaxPlayers",
+        "ParamFieldName": "$MaxUsers",
         "DefaultValue": "16",
         "EnumValues": {}
     }
