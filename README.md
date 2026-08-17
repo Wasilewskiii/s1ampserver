@@ -69,6 +69,10 @@ Keep the client mod on the **same S1DS release as the server**. The server verif
 - **Steam Guard loop**: email codes expire; trigger a fresh login attempt, then use the newest code promptly.
 - **Players time out**: check the three ports above are open/forwarded, and that `server_config.toml` ports match the template's port settings.
 
+## Future ideas
+
+- A second, AMP-native template variant that runs the game inside AMP's own Wine container (`cubecoders/ampbase:wine-stable`, like the Abiotic Factor template) instead of wrapping the upstream Docker image. That would give correct CPU/RAM graphs and AMP's built-in container resource limits, at the cost of maintaining the Wine, MelonLoader and .NET setup in the template itself rather than relying on the upstream image.
+
 ## Credits
 
 - [ifBars and contributors](https://github.com/ifBars/S1DedicatedServers): the S1DedicatedServers mod and Docker image
