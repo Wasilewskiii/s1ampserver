@@ -49,11 +49,11 @@ AMP registers the host firewall rules automatically. Forward these on your route
 
 Players **cannot join with an unmodded game**. Each player needs, one time:
 
-1. **Schedule I on the default Steam branch** (with IL2CPP runtime, no beta/branch switch needed: Steam → game Properties → Betas → "None").
+1. **Schedule I on the default Steam branch**.
 2. **MelonLoader**: installer from [MelonLoader releases](https://github.com/LavaGang/MelonLoader/releases). Pick **0.7.2 or newer** (avoid 0.7.1, known broken). Point it at the Schedule I install folder.
 3. **The S1DS client mod**: from [S1DedicatedServers releases](https://github.com/ifBars/S1DedicatedServers/releases) download **`Il2cpp_Client.zip`** (or `Mono-Client.zip` if the server runs the Mono runtime) and extract it into the Schedule I game folder, so that `DedicatedServerMod_Il2cpp_Client.dll` ends up in the game's `Mods\` folder.
 
-Then launch the game normally. A MelonLoader console opens alongside and lists the loaded mods. The mod adds a **join option to the main menu**: enter the server address as `IP:38465` (plus password if set) and connect.
+Then launch the game normally. A MelonLoader console opens alongside and lists the loaded mods. The mod adds a **join option to the main menu**: enter the server address as `IP:38465` and connect.
 
 Keep the client mod on the **same S1DS release as the server**. The server verifies client mods at join and version mismatches are the most common "can't connect" cause.
 
