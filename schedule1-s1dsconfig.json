@@ -61,5 +61,41 @@
         "ParamFieldName": "ImageTag",
         "DefaultValue": "latest",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Name",
+        "Category": "Schedule I:sports_esports",
+        "Subcategory": "Server:dns:2",
+        "Description": "Name shown to players. Applied to server_config.toml on each start (from the second start onward).",
+        "Keywords": "name,servername",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "ParamFieldName": "ServerName",
+        "DefaultValue": "Schedule One Dedicated Server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Password",
+        "Category": "Schedule I:sports_esports",
+        "Subcategory": "Server:dns:2",
+        "Description": "Join password. Empty = anyone can join. Avoid single quotes. Applied on each start.",
+        "Keywords": "password,serverPassword",
+        "FieldName": "ServerPassword",
+        "InputType": "password",
+        "ParamFieldName": "ServerPassword",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Max Players",
+        "Category": "Schedule I:sports_esports",
+        "Subcategory": "Server:dns:2",
+        "Description": "Maximum concurrent players. Applied on each start.",
+        "Keywords": "players,maxPlayers,slots",
+        "FieldName": "MaxPlayers",
+        "InputType": "number",
+        "ParamFieldName": "MaxPlayers",
+        "DefaultValue": "16",
+        "EnumValues": {}
     }
 ]
