@@ -97,5 +97,41 @@
         "ParamFieldName": "$MaxUsers",
         "DefaultValue": "16",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Container Memory Limit",
+        "Category": "Schedule I:sports_esports",
+        "Subcategory": "Resources:memory:3",
+        "Description": "RAM cap for the S1DS Docker container. Unlimited uses whatever the host has free. The server needs ~3-4 GB idle; allow more for players and IL2CPP generation.",
+        "Keywords": "memory,ram,limit",
+        "FieldName": "MemoryLimit",
+        "InputType": "enum",
+        "ParamFieldName": "MemoryLimit",
+        "DefaultValue": "",
+        "EnumValues": {
+            "": "Unlimited (default)",
+            "--memory 6g ": "6 GB",
+            "--memory 8g ": "8 GB",
+            "--memory 12g ": "12 GB",
+            "--memory 16g ": "16 GB"
+        }
+    },
+    {
+        "DisplayName": "Container CPU Limit",
+        "Category": "Schedule I:sports_esports",
+        "Subcategory": "Resources:memory:3",
+        "Description": "CPU core cap for the S1DS Docker container.",
+        "Keywords": "cpu,cores,limit",
+        "FieldName": "CPULimit",
+        "InputType": "enum",
+        "ParamFieldName": "CPULimit",
+        "DefaultValue": "",
+        "EnumValues": {
+            "": "All cores (default)",
+            "--cpus 2 ": "2 cores",
+            "--cpus 3 ": "3 cores",
+            "--cpus 4 ": "4 cores",
+            "--cpus 6 ": "6 cores"
+        }
     }
 ]
